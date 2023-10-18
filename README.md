@@ -39,7 +39,8 @@ world = [
 physics = [
     {
         gravity: 1,
-        friction: 0.8,
+        frictionx: 0.8,
+        frictiony: 0.5,
     },
 ]
 ```
