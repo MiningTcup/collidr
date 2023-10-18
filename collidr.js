@@ -40,7 +40,7 @@
             } else {
                 object.vy = 0;
                 object.grounded = true;
-            }            
+            }
         } else {
             object.grounded = false;
         }
@@ -48,10 +48,7 @@
 
     Collidr.colliding = function (object, world, boundary) {
         return (
-            object.x < 0 ||
-            object.x + object.w > boundary.w ||
-            object.y < 0 ||
-            object.y + object.h > boundary.h ||
+            (boundary && (object.x < 0 || object.x + object.w > boundary.w || object.y < 0 || object.y + object.h > boundary.h)) ||
             world.some((obj) => object.x < obj.x + obj.w && object.x + object.w > obj.x && object.y < obj.y + obj.h && object.y + object.h > obj.y)
         );
     };
