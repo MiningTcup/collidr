@@ -41,6 +41,8 @@
                 object.vy = 0;
                 object.grounded = true;
             }            
+        } else {
+            object.grounded = false;
         }
     };
 
